@@ -57,6 +57,10 @@ type Action
   | UpdatePointsInput String
   | Add
 
+sortEntries : Model -> Model
+sortEntries model =
+  { model | entries <- List.sortBy .points model.entries}
+
 update : Action -> Model -> Model
 update action model =
   case action of
@@ -64,7 +68,7 @@ update action model =
       model
 
     Sort ->
-      { model | entries <- List.sortBy .points model.entries}
+      sortEntries model
 
     Delete id ->
       let
@@ -95,7 +99,7 @@ update action model =
         if isInvalid model
         then model
         else
-          { model |
+          sortEntries { model |
               phraseInput <- "",
               pointsInput <- "",
               entries <- entryToAdd :: model.entries,
