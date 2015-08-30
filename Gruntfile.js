@@ -4,13 +4,13 @@ module.exports = function(grunt) { //eslint-disable-line no-undef
     elm: {
       compile: {
         files: {
-          'bingo.js': ['Bingo.elm']
+          'main.js': ['Bingo.elm', 'Main.elm', 'BingoUtil.elm']
         }
       }
     },
     watch: {
       elm: {
-        files: ['Bingo.elm', 'BingoUtils.elm'],
+        files: ['Main.elm', 'Bingo.elm', 'BingoUtils.elm'],
         tasks: ['elm']
       }
     },

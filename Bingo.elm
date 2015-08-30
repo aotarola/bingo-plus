@@ -6,7 +6,6 @@ import Html.Events exposing (..)
 import Signal exposing (Address)
 import String exposing (toUpper, repeat , trimRight)
 
-import StartApp
 import BingoUtils as Utils
 -- MODEL
 
@@ -199,15 +198,3 @@ view address model =
       [ text "sort" ],
     pageFooter
   ]
-
--- WIRE IT ALL TOGETHER
-main : Signal Html
-main =
-  -- initialModel
-  --   |> update Sort
-  --   |> view
-  StartApp.start
-    { model = initialModel,
-      view = view,
-      update = update
-    }
