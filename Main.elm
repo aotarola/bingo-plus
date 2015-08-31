@@ -1,3 +1,4 @@
+module Main where
 import StartApp
 import Html exposing (..)
 import Bingo exposing (initialModel, view, update)
