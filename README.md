@@ -11,14 +11,12 @@ The idea behind this app is to learn Elm language and add new features on Bingo 
 elm-package install
 ```
 
-2.- Now we need Grunt to help us re-compile whenever there is any change in the code.
+2.- Now we need to download `Grunt` and compile elm files
 
 ```bash
 npm install -g grunt-cli --save-dev
-npm install grunt --save-dev
-npm install grunt-contrib-watch --save-dev
-npm install grunt-contrib-clean --save-dev
-npm install grunt-elm --save-dev
+npm install
+grunt elm
 ```
 
 3.- Start watching the changes!
