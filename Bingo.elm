@@ -21,7 +21,8 @@ type alias Model =
     entries: List Entry,
     phraseInput: String,
     pointsInput: String,
-    nextID: Int
+    nextID: Int,
+    ascSort: Bool
   }
 
 newEntry : String -> Int -> Int -> Entry
@@ -42,7 +43,8 @@ initialModel =
     ],
     phraseInput = "",
     pointsInput = "",
-    nextID = 5
+    nextID = 5,
+    ascSort = True
   }
 
 -- UPDATE
@@ -58,7 +60,11 @@ type Action
 
 sortEntries : Model -> Model
 sortEntries model =
-  { model | entries <- List.sortBy .points model.entries}
+  let
+    chooseSortingMode e =
+      if model.ascSort then e.points else -e.points
+  in
+    { model | entries <- List.sortBy chooseSortingMode model.entries}
 
 update : Action -> Model -> Model
 update action model =
@@ -67,7 +73,7 @@ update action model =
       model
 
     Sort ->
-      sortEntries model
+      sortEntries {model | ascSort <- (not model.ascSort) }
 
     Delete id ->
       let
@@ -195,6 +201,6 @@ view address model =
     entryList address model.entries,
     button
       [ class "sort", onClick address Sort ]
-      [ text "sort" ],
+      [ text ("sort " ++ if not model.ascSort then "ascending" else "descending") ],
     pageFooter
   ]
