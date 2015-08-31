@@ -1,0 +1,24 @@
+{
+  "name": "bingo-plus",
+  "version": "1.0.0",
+  "description": "Bingo app from [pragmaticstudio](https://pragmaticstudio.com/elm) course.",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aotarola/bingo-plus.git"
+  },
+  "author": "Andres Otarola <andres@otarola.me>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/aotarola/bingo-plus/issues"
+  },
+  "homepage": "https://github.com/aotarola/bingo-plus",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-clean": "^0.6.0",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-elm": "^1.3.0"
+  }
+}
