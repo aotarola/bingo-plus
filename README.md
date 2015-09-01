@@ -1,7 +1,7 @@
-# Bingo!
-Bingo app from [pragmaticstudio](https://pragmaticstudio.com/elm) course.
+# Bingo+ !
+Bingo app, originally made from [pragmaticstudio](https://pragmaticstudio.com/elm) excellent Elm course.
 
-The idea behind this app is to learn Elm language and add new features on Bingo app while at it.
+The idea behind this, is to learn Elm language and add new features on Bingo app while at it ( that's why the plus :D ).
 
 ## How to run
 
