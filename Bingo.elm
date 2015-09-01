@@ -7,6 +7,7 @@ import Signal exposing (Address)
 import String exposing (toUpper, repeat , trimRight)
 
 import BingoUtils as Utils
+
 -- MODEL
 
 type alias Entry =
@@ -110,7 +111,6 @@ update action model =
               entries <- entryToAdd :: model.entries,
               nextID <- model.nextID + 1
           }
-
 
 -- VIEW
 
